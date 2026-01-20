@@ -116,6 +116,6 @@ if uploaded_file is not None:
         st.download_button(
             label="Download Zoomed Data",
             data=csv,
-            file_name=f"normal_road_{start_t:.1f}_{end_t:.1f}.csv",
+            file_name=f"pothole_{start_t:.1f}_{end_t:.1f}.csv",
             mime="text/csv"
         )

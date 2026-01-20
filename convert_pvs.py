@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # --- CONFIGURATION ---
-INPUT_FILE = 'dataset_gps_mpu_left.csv'
+INPUT_FILE = 'dataset_gps_mpu_right.csv'
 OUTPUT_FILE = 'pvs_cleaned_for_app_100hz.csv'
 
 print(f"Reading {INPUT_FILE}...")
