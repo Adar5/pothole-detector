@@ -26,7 +26,8 @@ for folder in FOLDERS_TO_AUGMENT:
             df = pd.read_csv(filepath)
             
             # Identify signal columns to modify (don't touch timestamp/GPS)
-            sensor_cols = [c for c in df.columns if 'acc' in c.lower() or 'gyro' in c.lower()]
+            # Updated to catch 'x', 'y', 'z', 'vibration', 'signal', etc.
+            sensor_cols = [c for c in df.columns if any(keyword in c.lower() for keyword in ['acc', 'gyro', 'x', 'y', 'z', 'vibration', 'signal'])]
             
             for i in range(1, AUGMENT_FACTOR + 1):
                 df_aug = df.copy()
